@@ -1,0 +1,19 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="AbacusLab.DataExtractionTool.View.RegexView" 
+             mc:Ignorable="d" DataContext="{Binding RegexViewModel, Source={StaticResource Locator}}">
+    <telerik:RadBusyIndicator IsBusy="{Binding IsBusy}" BusyContent="{Binding BusyContent}">
+        <Grid>
+            <TextBlock Margin="0" TextWrapping="Wrap" Text="{Binding Title}" VerticalAlignment="Top" Style="{DynamicResource Title}"/>
+            <telerik:RadButton HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="128" Width="148" Command="{Binding StartCommand}">
+                <telerik:RadButton.Content>
+                    <Image Source="../Images/play.png"></Image>
+                </telerik:RadButton.Content>
+            </telerik:RadButton>
+            <telerik:RadProgressBar Height="40" Margin="0,265,0,0" Value="{Binding ProgressValue}" VerticalAlignment="Bottom" Maximum="{Binding MaxProgressValue}" />
+        </Grid>
+    </telerik:RadBusyIndicator>
+</UserControl>

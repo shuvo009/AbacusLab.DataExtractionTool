@@ -1,0 +1,79 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+        x:Class="AbacusLab.DataExtractionTool.MainWindow"
+        Title="MainWindow" Height="350" Width="542.105" DataContext="{Binding Main, Source={StaticResource Locator}}" Icon="Icon/applescript_utility.ico">
+    <Window.Resources>
+
+        <Style  x:Key="ControlSizeStyle" TargetType="Control">
+            <Setter Property="Height" Value="65"/>
+            <Setter Property="Width" Value="170"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <Style x:Key="MenuButton" TargetType="telerik:RadButton" BasedOn="{StaticResource ControlSizeStyle}">
+            <Setter Property="Background" Value="#FF088B5C"/>
+            <Setter Property="Foreground" Value="{x:Null}"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Margin" Value="5,5,0,0"></Setter>
+        </Style>
+
+        <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Width" Value="165"/>
+        </Style>
+
+        <Style x:Key="ImageStyle" TargetType="Image">
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Margin" Value="10,0,0,0"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+        </Style>
+
+    </Window.Resources>
+    <WrapPanel Background="#FF323232">
+        <telerik:RadButton Style="{StaticResource MenuButton}" Command="{Binding MenuCommand}" CommandParameter="Amazon">
+            <StackPanel Orientation="Horizontal" Style="{StaticResource StackPanelStyle}">
+                <Image Style="{StaticResource ImageStyle}"  Source="Images/amazonLogo.png"></Image>
+                <TextBlock Style="{StaticResource TextBoxStyle}" Text="Amazon" />
+            </StackPanel>
+        </telerik:RadButton>
+        <telerik:RadButton Style="{StaticResource MenuButton}" Command="{Binding MenuCommand}" CommandParameter="Google">
+            <StackPanel Orientation="Horizontal" Style="{StaticResource StackPanelStyle}">
+                <Image Style="{StaticResource ImageStyle}"  Source="Images/GoogleLogo.png"></Image>
+                <TextBlock Style="{StaticResource TextBoxStyle}" Text="Google" />
+            </StackPanel>
+        </telerik:RadButton>
+        <telerik:RadButton Style="{StaticResource MenuButton}" Command="{Binding MenuCommand}" CommandParameter="VCard">
+            <StackPanel Orientation="Horizontal" Style="{StaticResource StackPanelStyle}">
+                <Image Style="{StaticResource ImageStyle}"  Source="Images/VCardLogo.png"></Image>
+                <TextBlock Style="{StaticResource TextBoxStyle}" Text="VCard" />
+            </StackPanel>
+        </telerik:RadButton>
+        <telerik:RadButton Style="{StaticResource MenuButton}" Command="{Binding MenuCommand}" CommandParameter="HtmlParser">
+            <StackPanel Orientation="Horizontal" Style="{StaticResource StackPanelStyle}">
+                <Image Style="{StaticResource ImageStyle}"  Source="Images/htmlLogo.png"></Image>
+                <TextBlock Style="{StaticResource TextBoxStyle}" Text="HTML" />
+            </StackPanel>
+        </telerik:RadButton>
+        <telerik:RadButton Style="{StaticResource MenuButton}" Command="{Binding MenuCommand}" CommandParameter="RegexParser">
+            <StackPanel Orientation="Horizontal" Style="{StaticResource StackPanelStyle}">
+                <Image Style="{StaticResource ImageStyle}"  Source="Images/RegexLogo.png"></Image>
+                <TextBlock Style="{StaticResource TextBoxStyle}" Text="Regex" />
+            </StackPanel>
+        </telerik:RadButton>
+        <telerik:RadButton Style="{StaticResource MenuButton}" Command="{Binding MenuCommand}" CommandParameter="AllabologSe">
+        	<StackPanel Orientation="Horizontal" Style="{StaticResource StackPanelStyle}">
+        		<Image Style="{StaticResource ImageStyle}"  Source="Images/htmlLogo.png"/>
+                <TextBlock Style="{StaticResource TextBoxStyle}" Text="Allabolog" />
+        	</StackPanel>
+        </telerik:RadButton>
+    </WrapPanel>
+</Window>

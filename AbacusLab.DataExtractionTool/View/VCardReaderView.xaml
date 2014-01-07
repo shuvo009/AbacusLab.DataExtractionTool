@@ -1,0 +1,22 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="AbacusLab.DataExtractionTool.View.VCardReaderView" 
+             mc:Ignorable="d" DataContext="{Binding VCardReaderViewModel, Source={StaticResource Locator}}">
+    <telerik:RadBusyIndicator IsBusy="{Binding IsBusy}" BusyContent="{Binding BusyContent}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <telerik:RadButton  Command="{Binding StartCommand}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="16" Height="158.5" Width="154" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <telerik:RadButton.Content>
+                    <Image Source="../Images/play.png"></Image>
+                </telerik:RadButton.Content>
+            </telerik:RadButton>
+            <telerik:RadProgressBar Height="45" Margin="0" Maximum="{Binding MaxProgressValue}" Value="{Binding ProgressValue}" Minimum="0" VerticalAlignment="Bottom" />
+            <TextBlock Text="{Binding Title}"  TextWrapping="Wrap" VerticalAlignment="Top" Style="{DynamicResource Title}"/>
+        </Grid>
+    </telerik:RadBusyIndicator>
+</UserControl>

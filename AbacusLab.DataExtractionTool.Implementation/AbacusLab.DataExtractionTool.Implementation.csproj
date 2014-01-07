@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D856981A-692D-4CF2-9232-87C9D53A8C77}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AbacusLab.DataExtractionTool.Implementation</RootNamespace>
+    <AssemblyName>AbacusLab.DataExtractionTool.Implementation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>..\packages\ClosedXML.0.69.1\lib\net40-client\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\packages\DocumentFormat.OpenXml.1.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Windows.Controls, Version=2013.2.611.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\DownloadBase.cs" />
+    <Compile Include="Base\ImplementationBase.cs" />
+    <Compile Include="Data\RegexCollection.cs" />
+    <Compile Include="Dependence\DependenceResolver.cs" />
+    <Compile Include="Download\Amazon\AmazonHeader.cs" />
+    <Compile Include="Download\Amazon\AmazonSearchIndex.cs" />
+    <Compile Include="Download\Amazon\AmazonSigningEndpointBehavior.cs" />
+    <Compile Include="Download\Amazon\AmazonSigningMessageInspector.cs" />
+    <Compile Include="Download\Amazon\AmazonProductInfoDownloaded.cs" />
+    <Compile Include="Download\DownloadHtml.cs" />
+    <Compile Include="Download\DownloadVCard.cs" />
+    <Compile Include="Download\DynamicDownload.cs" />
+    <Compile Include="Download\Google\ApiKeys.cs" />
+    <Compile Include="Download\Google\GooglePlaceDownload.cs" />
+    <Compile Include="Download\Google\GoogleUrlMaker.cs" />
+    <Compile Include="FilePath\ExcelFilePath.cs" />
+    <Compile Include="FilePath\TextFilePath.cs" />
+    <Compile Include="File\CSVWriter.cs" />
+    <Compile Include="File\ExcelWriter.cs" />
+    <Compile Include="File\ReadFromExcel.cs" />
+    <Compile Include="File\ReadFromText.cs" />
+    <Compile Include="File\TextWriter.cs" />
+    <Compile Include="File\WordReader.cs" />
+    <Compile Include="Html\AllabologSe.cs" />
+    <Compile Include="Html\HtmlParser.cs" />
+    <Compile Include="Html\Tripadvisorcom.cs" />
+    <Compile Include="Messages\MessageService.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RegexParser\ParseEmail.cs" />
+    <Compile Include="RegexParser\ParserWebSite.cs" />
+    <Compile Include="Service References\AmazoneService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbacusLab.DataExtractionTool.Common\AbacusLab.DataExtractionTool.Common.csproj">
+      <Project>{833a54a6-6611-4edb-b232-cb589c7afa39}</Project>
+      <Name>AbacusLab.DataExtractionTool.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbacusLab.DataExtractionTool.Entitys\AbacusLab.DataExtractionTool.Entitys.csproj">
+      <Project>{7832b9f7-6e2a-4b04-b03d-ce2fac1c3f27}</Project>
+      <Name>AbacusLab.DataExtractionTool.Entitys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbacusLab.DataExtractionTool.Interface\AbacusLab.DataExtractionTool.Interface.csproj">
+      <Project>{d15a7d3f-12f7-4e49-9c4e-526ead8aafc7}</Project>
+      <Name>AbacusLab.DataExtractionTool.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.BrowseNodeLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.BrowseNodeLookupResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.CartAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.CartAddResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.CartClearResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.CartClearResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.CartCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.CartCreateResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.CartGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.CartGetResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.CartModifyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.CartModifyResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.ItemLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.ItemLookupResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.ItemSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.ItemSearchResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.SimilarityLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AbacusLab.DataExtractionTool.Implementation.AmazoneService.SimilarityLookupResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AmazoneService\AWSECommerceService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AmazoneService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AmazoneService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AmazoneService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AmazoneService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

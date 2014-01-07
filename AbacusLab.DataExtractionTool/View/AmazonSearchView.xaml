@@ -1,0 +1,46 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             x:Class="AbacusLab.DataExtractionTool.View.AmazonSearchView" 
+     xmlns:Helpers="clr-namespace:AbacusLab.DataExtractionTool.Implementation.Download.Amazon;assembly=AbacusLab.DataExtractionTool.Implementation"
+             mc:Ignorable="d" DataContext="{Binding AmazonSearchViewModel, Source={StaticResource Locator}}">
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="SearchIndex" MethodName="GetNames" ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="Helpers:AmazonSearchIndex" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </UserControl.Resources>
+    <telerik:RadBusyIndicator IsBusy="{Binding IsBusy}" BusyContent="{Binding BusyContent}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="175*"/>
+                <ColumnDefinition Width="296*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Margin="0" TextWrapping="Wrap" Text="{Binding Title}" VerticalAlignment="Top" Style="{DynamicResource Title}" Grid.ColumnSpan="2"/>
+            <StackPanel Margin="10,40.47,0,0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <RadioButton Content="ASIN" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top"/>
+                <RadioButton Content="ISBN 10/13" HorizontalAlignment="Left" IsChecked="{Binding IsIsbn, Mode=TwoWay}" VerticalAlignment="Top" Margin="20,0,0,0"/>
+            </StackPanel>
+            <telerik:RadButton HorizontalAlignment="Center" Margin="0,88,0,0" VerticalAlignment="Top" Height="107.073" Width="110.073" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Command="{Binding StartCommand}" >
+                <telerik:RadButton.Content>
+                    <Image Source="../Images/play.png"/>
+                </telerik:RadButton.Content>
+            </telerik:RadButton>
+            <TextBox x:Name="SearchTextBox" Height="26" Margin="11,40,9,0" TextWrapping="Wrap"  Grid.Column="1" VerticalAlignment="Top" FontSize="16"/>
+            <telerik:RadButton HorizontalAlignment="Center" Margin="0,115.04,0,0" VerticalAlignment="Top"  Grid.Column="1" Height="107" Width="110" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Command="{Binding SearchByTextCommand}" CommandParameter="{Binding Text, ElementName=SearchTextBox}">
+                <telerik:RadButton.Content>
+                    <Image Source="../Images/play.png"></Image>
+                </telerik:RadButton.Content>
+            </telerik:RadButton>
+            <telerik:RadComboBox ItemsSource="{Binding Source={StaticResource SearchIndex}}" SelectedValue="{Binding AmazonSearchIndex, Mode=TwoWay}" HorizontalAlignment="Left" Margin="82.13,76.47,0,0" VerticalAlignment="Top" Width="203.87" Grid.Column="1"/>
+            <Label Content="Category : " Grid.Column="1" HorizontalAlignment="Left" Margin="10,82.47,0,0" VerticalAlignment="Top"/>
+            <telerik:RadProgressBar Maximum="{Binding MaxProgressValue}" Grid.Column="0" Height="40" Margin="0" Value="{Binding ProgressValue}" VerticalAlignment="Bottom"/>
+            <telerik:RadProgressBar Maximum="{Binding AmazonProductInfoDownloaded.ProgressMaxValue}" IsIndeterminate="{Binding AmazonProductInfoDownloaded.IsIndeterminate}" Grid.Column="1" Height="40" Value="{Binding AmazonProductInfoDownloaded.ProgressComplete}" VerticalAlignment="Bottom" Margin="10,0,0,0"/>
+        </Grid>
+    </telerik:RadBusyIndicator>
+</UserControl>

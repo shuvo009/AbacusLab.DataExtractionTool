@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AbacusLab.DataExtractionTool.Implementation.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AmazonAccessKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AKIAIYHNWRPBKLK6OUFQ</Value>
+    </Setting>
+    <Setting Name="AmazonSecretAccessKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">B+HBDSQFRu0Uc9FtQhtwGtu0AMgFlKOYwK/qSYRB</Value>
+    </Setting>
+    <Setting Name="AmazonAssociateTag" Type="System.String" Scope="User">
+      <Value Profile="(Default)">wwwcodaromane-20</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

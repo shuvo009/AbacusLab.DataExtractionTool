@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbacusLab.DataExtractionTool.Interface", "AbacusLab.DataExtractionTool.Interface\AbacusLab.DataExtractionTool.Interface.csproj", "{D15A7D3F-12F7-4E49-9C4E-526EAD8AAFC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbacusLab.DataExtractionTool.Implementation", "AbacusLab.DataExtractionTool.Implementation\AbacusLab.DataExtractionTool.Implementation.csproj", "{D856981A-692D-4CF2-9232-87C9D53A8C77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbacusLab.DataExtractionTool.Common", "AbacusLab.DataExtractionTool.Common\AbacusLab.DataExtractionTool.Common.csproj", "{833A54A6-6611-4EDB-B232-CB589C7AFA39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbacusLab.DataExtractionTool.UnitTest", "AbacusLab.DataExtractionTool.Test\AbacusLab.DataExtractionTool.UnitTest.csproj", "{1DEBE2B6-15EA-41D9-A045-AA03A1017E17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EA637EE4-4D91-4223-AA5E-185BA2CBB2E3}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbacusLab.DataExtractionTool.Entitys", "AbacusLab.DataExtractionTool.Entitys\AbacusLab.DataExtractionTool.Entitys.csproj", "{7832B9F7-6E2A-4B04-B03D-CE2FAC1C3F27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbacusLab.DataExtractionTool", "AbacusLab.DataExtractionTool\AbacusLab.DataExtractionTool.csproj", "{21A65B46-5581-4C31-885C-BCFFC9E46F0D}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://wrdreamer.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AbacusLab.DataExtractionTool.Common\\AbacusLab.DataExtractionTool.Common.csproj
+		SccProjectName1 = AbacusLab.DataExtractionTool.Common
+		SccLocalPath1 = AbacusLab.DataExtractionTool.Common
+		SccProjectUniqueName2 = AbacusLab.DataExtractionTool.Implementation\\AbacusLab.DataExtractionTool.Implementation.csproj
+		SccProjectName2 = AbacusLab.DataExtractionTool.Implementation
+		SccLocalPath2 = AbacusLab.DataExtractionTool.Implementation
+		SccProjectUniqueName3 = AbacusLab.DataExtractionTool.Interface\\AbacusLab.DataExtractionTool.Interface.csproj
+		SccProjectName3 = AbacusLab.DataExtractionTool.Interface
+		SccLocalPath3 = AbacusLab.DataExtractionTool.Interface
+		SccProjectUniqueName4 = AbacusLab.DataExtractionTool.Test\\AbacusLab.DataExtractionTool.UnitTest.csproj
+		SccProjectName4 = AbacusLab.DataExtractionTool.Test
+		SccLocalPath4 = AbacusLab.DataExtractionTool.Test
+		SccProjectUniqueName5 = AbacusLab.DataExtractionTool.Entitys\\AbacusLab.DataExtractionTool.Entitys.csproj
+		SccProjectName5 = AbacusLab.DataExtractionTool.Entitys
+		SccLocalPath5 = AbacusLab.DataExtractionTool.Entitys
+		SccProjectUniqueName6 = AbacusLab.DataExtractionTool\\AbacusLab.DataExtractionTool.csproj
+		SccProjectName6 = AbacusLab.DataExtractionTool
+		SccLocalPath6 = AbacusLab.DataExtractionTool
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D15A7D3F-12F7-4E49-9C4E-526EAD8AAFC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15A7D3F-12F7-4E49-9C4E-526EAD8AAFC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15A7D3F-12F7-4E49-9C4E-526EAD8AAFC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15A7D3F-12F7-4E49-9C4E-526EAD8AAFC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D856981A-692D-4CF2-9232-87C9D53A8C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D856981A-692D-4CF2-9232-87C9D53A8C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D856981A-692D-4CF2-9232-87C9D53A8C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D856981A-692D-4CF2-9232-87C9D53A8C77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{833A54A6-6611-4EDB-B232-CB589C7AFA39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{833A54A6-6611-4EDB-B232-CB589C7AFA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{833A54A6-6611-4EDB-B232-CB589C7AFA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{833A54A6-6611-4EDB-B232-CB589C7AFA39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DEBE2B6-15EA-41D9-A045-AA03A1017E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DEBE2B6-15EA-41D9-A045-AA03A1017E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DEBE2B6-15EA-41D9-A045-AA03A1017E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DEBE2B6-15EA-41D9-A045-AA03A1017E17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7832B9F7-6E2A-4B04-B03D-CE2FAC1C3F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7832B9F7-6E2A-4B04-B03D-CE2FAC1C3F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7832B9F7-6E2A-4B04-B03D-CE2FAC1C3F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7832B9F7-6E2A-4B04-B03D-CE2FAC1C3F27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A65B46-5581-4C31-885C-BCFFC9E46F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A65B46-5581-4C31-885C-BCFFC9E46F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A65B46-5581-4C31-885C-BCFFC9E46F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A65B46-5581-4C31-885C-BCFFC9E46F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
